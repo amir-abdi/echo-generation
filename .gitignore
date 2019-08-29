@@ -119,9 +119,3 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-
-
-/Data
-.requirements.txt.swp
-Run.txt
-/configs/config.json
