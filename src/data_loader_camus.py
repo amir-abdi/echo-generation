@@ -149,7 +149,6 @@ class DataLoaderCamus:
         center = [x.mean(), y.mean()]
 
         from scipy.stats import multivariate_normal
-        # TODO: not tested for images with different width and height
         gauss = multivariate_normal.pdf(np.mgrid[
                                         0:self.img_res[1],
                                         0:self.img_res[0]].reshape(2, -1).transpose(),
@@ -157,7 +156,6 @@ class DataLoaderCamus:
                                         cov=gauss_var)
         gauss /= gauss.max()
         gauss = gauss.reshape((self.img_res[1], self.img_res[0], 1))
-        # print(gauss.max())
 
         # set the gauss value of the main target part to 1
         gauss[mask > 0] = 1

@@ -37,12 +37,13 @@ def main(argv):
         name += str(l)
     config['NAME'] += '_' + name
 
-    # Initialize data loader
+    # Organize augmentation hyper-parameters from config
     augmentation = dict()
     for key, value in config.items():
         if 'AUG_' in key:
             augmentation[key] = value
 
+    # Initialize data loader
     data_loader = DataLoaderCamus(
         dataset_path=FLAGS.dataset_path,
         input_name=config['INPUT_NAME'],

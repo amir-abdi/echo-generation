@@ -91,7 +91,7 @@ class PatchGAN:
                               loss_weights=[config['LOSS_WEIGHT_DISC'],
                                             config['LOSS_WEIGHT_GEN']])
 
-        # Training
+        # Training hyper-parameters
         self.batch_size = config['BATCH_SIZE']
         self.max_iter = config['MAX_ITER']
         self.val_interval = config['VAL_INTERVAL']

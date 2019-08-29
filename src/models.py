@@ -92,7 +92,7 @@ class Discriminator:
             discriminator_input_image = input_inputs
             discriminator_input_list = [input_inputs]
 
-        # 4 d_layers with stride of 2 --> output is 1/16 in each dimension
+        # Add 4 d_layers with stride of 2 --> output is 1/16 in each dimension
         d = d_layer(discriminator_input_image, self.filters, bn=False)
 
         for i in range(self.num_layers - 1):
