@@ -1,9 +1,8 @@
 ## GAN-enhanced Conditional Echocardiogram Generation   
 
 This repository accompanies our submission to the 
-SASHIMI workshop of 
-the 22nd International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2019), 
-which will be held from October 13th to 17th, 2019, in Shenzhen, China.
+Med-NeurIPS 2019 workshop of 
+the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada.
 
 
 #### Training
