@@ -39,8 +39,6 @@ class DataLoaderCamus:
         print('#train:', len(self.train_patients))
         print('#valid:', len(self.valid_patients))
         print('#test:', len(self.test_patients))
-        print('validation set:', self.valid_patients)
-        print('test set:', self.test_patients)
 
         all_labels = {0, 1, 2, 3}
         self.not_labels = all_labels - set(labels)

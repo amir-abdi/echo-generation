@@ -8,7 +8,6 @@ from patch_gan import PatchGAN
 from utils import set_backend
 
 flags.DEFINE_string('dataset_path', None, 'Path of the dataset.')
-flags.DEFINE_string('gpu', '0', 'Comma separated list of GPU cores to use for training.')
 flags.DEFINE_boolean('test', False, 'Test model and generate outputs on the test set')
 flags.DEFINE_string('config', None, 'Config file for training hyper-parameters.')
 flags.DEFINE_boolean('use_wandb', False, 'Use wandb for logging')
@@ -29,7 +28,7 @@ plt.switch_backend('agg')
 def main(argv):
     # Load configs from file
     config = json.load(open(FLAGS.config))
-    set_backend(FLAGS.gpu)
+    set_backend()
 
     # Set name
     name = '{}_{}_'.format(config['INPUT_NAME'], config['TARGET_NAME'])

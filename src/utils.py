@@ -22,8 +22,7 @@ def gen_fig(inputs, generated, targets):
     return fig
 
 
-def set_backend(gpu):
-    os.environ["CUDA_VISIBLE_DEVICES"] = gpu
+def set_backend():
     from keras.optimizers import tf
     cf = tf.ConfigProto()
     cf.gpu_options.allow_growth = True
