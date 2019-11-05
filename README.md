@@ -16,13 +16,12 @@ Install the requirements by running
 
     pip3 install -r requirements.txt
     
-Alternatively, a ready-to-use <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" width="80" align="middle"> image is available:
-    
-    docker pull amirabdi/echo-generation
 
-Or try making your own <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" width="80" align="middle"> image:
+Alternatively, make a <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" width="80" align="middle"> image
+by running:
 
     docker build -t echo-generation .
+A ready-to-use docker image is also available on [docker hub](https://cloud.docker.com/u/amirabdi/repository/docker/amirabdi/echo-generation).
 
 #### Data
 
