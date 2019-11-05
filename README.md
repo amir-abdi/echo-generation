@@ -1,20 +1,41 @@
 ## GAN-enhanced Conditional Echocardiogram Generation   
 
 This repository accompanies our submission to the 
-Med-NeurIPS 2019 workshop of 
+Medical Imaging Meets NeurIPS workshop of 
 the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada.
 
 
-#### Training
+#### Requirements & 
 
-This is a Python3 implementation. To train the models, first install the requirements by running
+- The implementation uses Keras with TensorFlow backend.
+- scikit-image, SimpleITK, and matplotlib are used for data augmentation and 
+visualization.
+- Training is logged using the Weights & Biases tool ([wandb](www.wandb.com)).
+
+Install the requirements by running
 
     pip3 install -r requirements.txt
+    
+Alternatively, a ready-to-use <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" width="80" align="middle"> image is available:
+    
+    docker pull amirabdi/echo-generation
 
-Subsequently, to train the model call `main.py` with a 
+Or try making your own <img src="https://www.docker.com/sites/default/files/d8/2019-07/horizontal-logo-monochromatic-white.png" width="80" align="middle"> image:
+
+    docker build -t echo-generation .
+
+#### Data
+
+We use the publicly available dataset of [CAMUS](https://arxiv.org/pdf/1908.06948.pdf), 
+which can be downloaded from [here](http://camus.creatis.insa-lyon.fr/challenge/#challenge/5ca20fcb2691fe0a9dac46c8).
+
+    
+#### Training
+
+To train the model call `main.py` with a 
 config file of your choosing. 
 The 5 config files corresponding to the 5 experiments of the article are
-available in the `configs/` directory.   
+available in the `configs/` directory, e.g.
 
      python3 src/main.py \
      --dataset_path=$DATASETS/CAMUS \
@@ -24,5 +45,4 @@ The environment variable `$DATASET` is assumed to be set to
 where the CAMUS dataset directory is stored. 
 
 #### Sample Generated Echos
-
-![Reconstructed Samples](./imgs/results.png)
+<img src="./imgs/results.png" width="400" align="middle">
