@@ -1,3 +1,8 @@
+"""
+The implementations of models are based on the pix2pix implementation of the Keras-GAN library:
+https://github.com/eriklindernoren/Keras-GAN/blob/master/pix2pix/pix2pix.py
+"""
+
 from keras.layers import Input, Dropout, Concatenate
 from keras.layers import BatchNormalization
 from keras.layers.advanced_activations import LeakyReLU
