@@ -1,9 +1,18 @@
 ## GAN-enhanced Conditional Echocardiogram Generation   
 
-This repository accompanies our submission to the 
+This repository accompanies our manuscript in the 
 Medical Imaging Meets NeurIPS workshop of 
-the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada.
+the 33rd Conference on Neural Information Processing Systems (NeurIPS 2019), Vancouver, Canada. \
+The draft of the manuscript is available here: [https://arxiv.org/abs/1911.02121](https://arxiv.org/abs/1911.02121). 
 
+If you found this code useful in your research, please consider citing:
+
+    @misc{abdi-echoGen,
+    Author = {Amir H. Abdi and Teresa Tsang and Purang Abolmaesumi},
+    Title = {GAN-enhanced Conditional Echocardiogram Generation},
+    Year = {2019},
+    Eprint = {arXiv:1911.02121},
+    }
 
 #### Requirements & 
 
@@ -44,4 +53,13 @@ The environment variable `$DATASET` is assumed to be set to
 where the CAMUS dataset directory is stored. 
 
 #### Sample Generated Echos
-<img src="./imgs/results.png" width="400" align="middle">
+
+Check the complete video on [YouTube](http://www.youtube.com/watch?feature=player_embedded&v=9rfaL2uxkyc).
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=9rfaL2uxkyc
+" target="_blank">
+![](./imgs/video_demo.gif)
+</a>
+
+<img src="./imgs/results.png" width="480" align="middle">
+
